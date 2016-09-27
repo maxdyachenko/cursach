@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>E-dictation</title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/grid/grid.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/media.css">
+	
+</head>
+<body>
+	<header class="main-header">
+		<div class="container header-content">
+			<div class="row">
+				
+				<h1 class="main-logo"><a href="#">E-dictation</a></h1>
+				
+				
+				<nav class="main-menu" id="mainMenu">
+					<ul>
+						<li><a href="#">Диктанти</a></li>
+						<li><a href="#">Рейтинг</a></li>
+						<li><a href="#">Щось ще</a></li>
+						<li><a href="#">Щось ще</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li class="reg-field"><a href="#">Реєстрація</a></li>
+						<li class="reg-field"><a href="#">Вхід</a></li>
+					</ul>
+				</nav>
+				
+				
+				<span class="sandwich" id="sand">
+					<div></div>
+					<div></div>
+					<div></div>
+				</span>
+			</div>
+		</div>
+		
+	</header>
+	<script>
+		var menu = document.getElementById('mainMenu');
+		var sand = document.getElementById('sand');
+
+		sand.addEventListener('click',function(){
+			if (menu.className == "main-menu"){
+				menu.className += " responsive";
+			}
+			else menu.className = "main-menu";
+		})
+
+	</script>
+</body>
+</html>

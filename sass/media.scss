@@ -1,0 +1,100 @@
+
+@media only screen and (min-width : 1400px) {
+	
+}
+@media only screen and (min-width : 320px) and (max-width: 992px){
+	.main-header{
+		.main-logo{
+			width: 40%;
+		}
+	}
+	.sandwich{
+		display: block;
+		position: absolute;
+		top: 30px;
+		right: 10%;
+	}
+	.main-menu{
+		ul{
+			li{
+				display: none;
+			}
+		}
+
+	}
+	.responsive{
+		width: 100%;
+		ul{
+			li{
+				float: none;
+				display: inline;
+				a{
+					padding: 5px;
+					display: block;
+					text-align: center;
+					&::before{
+						transition:none;
+						height: 0px;
+					}
+
+
+				}
+			}
+		}
+		.reg-field{
+			float: none;
+		}
+	}
+	
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	
+	
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)  {
+	
+	
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.sandwich{
+		display: none;
+	}
+	.main-header{
+		.main-logo{
+			width: 100%;
+			text-align: center;
+			float: none;
+		}
+	}
+	.main-menu{
+		width: 100%;
+	}
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.main-header{
+		.main-logo{
+			width: 20%;
+			text-align: center;
+			float: left;
+		}
+	}
+	.main-menu{
+		width: 80%;
+	}
+
+}
+
+@media only screen and (min-width : 1400px) {
+
+}

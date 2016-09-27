@@ -1,0 +1,112 @@
+//изменить цвет шрифта меню и рег филда
+@import 'mixins/vendor-prefix';
+$font:'Roboto', sans-serif;
+$menucolor:#495156;
+$regfieldcolor:black;
+*{
+	margin:0;
+	padding:0;
+}
+ul{
+	li{
+		list-style-type: none;
+	}
+}
+a{
+	color: inherit;
+	text-decoration:none;
+	&:hover{
+		text-decoration:none;
+		color: inherit;
+	}
+	&:visited{
+		text-decoration:none;
+	}
+	&:active{
+		text-decoration:none;
+	}
+}
+body{
+
+}
+
+.main-header{
+	overflow: hidden;
+	width: 100%;
+	background:#85c1e5;
+	.main-logo{
+		width: 20%;
+		text-align: left;
+		float: left;
+		font-size: 30px;
+		font-family: 'Pacifico', cursive;
+		
+	}
+}
+.header-content{
+	padding: 20px;
+}
+
+.main-menu{
+	
+		width: 80%;
+		float: left;
+		ul{
+			li{
+				color: $menucolor;
+				font-family: $font;
+				font-weight: bold;
+				font-size: 20px;
+				padding: 12px 5px;
+				display: inline-block;
+				letter-spacing: 1.5px;
+
+				a{
+					position: relative;
+					&:hover::before{
+						webkit-transform: scaleX(1);
+						transform: scaleX(1);
+						visibility: visible;
+					}
+					&::before{
+						content: "";
+						width: 100%;
+						height: 2px;
+						background-color: #e05d60;
+						position: absolute;
+						left: 0; bottom: -7px; right: 0;
+
+						@include vendor-prefix('all','.3s ease');
+						-webkit-transition: all 0.35s ease-in-out 0s;
+						-webkit-transform: scaleX(0);
+
+						transition: all 0.35s ease-in-out 0s;
+						transform: scaleX(0);
+						visibility: hidden;
+					}
+					&:hover{
+						cursor: pointer;
+						color: $regfieldcolor;
+					}
+
+				}
+			}
+		}
+		.reg-field{
+			float: right;
+			color: $regfieldcolor;
+		}
+	
+}
+
+.sandwich{
+	display: none;
+	float: right;
+	div{
+		width: 23px;
+		height: 3px;
+		background: black;
+		margin:5px;
+		@include vendor-prefix('border-radius','2px');
+	}
+}
