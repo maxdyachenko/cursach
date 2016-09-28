@@ -2,21 +2,24 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>E-dictation</title>
 	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/grid/grid.css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="styles/media.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	
 </head>
 <body>
+	<div id="preloader"><i class="fa fa-spinner fa-2x"></i></div>
 	<header class="main-header">
 		<div class="container header-content">
 			<div class="row">
-				
+
 				<h1 class="main-logo"><a href="#">E-dictation</a></h1>
-				
-				
+
+
 				<nav class="main-menu" id="mainMenu">
 					<ul>
 						<li><a href="#">Диктанти</a></li>
@@ -25,11 +28,11 @@
 						<li><a href="#">Щось ще</a></li>
 						<li><a href="#">FAQ</a></li>
 						<li class="reg-field"><a href="#">Реєстрація</a></li>
-						<li class="reg-field"><a href="#">Вхід</a></li>
+						<li class="reg-field" id="mainEnter"><a href="#">Вхід</a></li>
 					</ul>
 				</nav>
-				
-				
+
+
 				<span class="sandwich" id="sand">
 					<div></div>
 					<div></div>
@@ -37,18 +40,72 @@
 				</span>
 			</div>
 		</div>
-		
-	</header>
-	<script>
-		var menu = document.getElementById('mainMenu');
-		var sand = document.getElementById('sand');
 
-		sand.addEventListener('click',function(){
-			if (menu.className == "main-menu"){
-				menu.className += " responsive";
-			}
-			else menu.className = "main-menu";
-		})
+	</header>
+	<div id="shadow"></div>
+	<section class="auth-section" id="authSection">
+		
+		<div class="auth-window">
+			<form action="" method="POST" class="auth-form">
+				<label class="auth-label" for="login">Логін</label>
+				<input class="auth-input" type="text" placeholder="Your login" id="login">
+				<label class="auth-label" for="password">Пароль</label>
+				<input class="auth-input" type="password" placeholder="***" id="password">
+				<div class="rem-me">
+					<label for="auth-checkbox">Запам'ятати мене<input type="checkbox" id="auth-checkbox"></label>
+				</div>
+				<div class="forgot-pswd">
+					<span>Забули пароль?</span>
+				</div>
+
+
+				<div class="enter-butt"><button>Увійти</button></div>
+				<div class="soc-icon">
+					<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
+					<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
+				</div>
+			</form>
+			<span id="closeButt"><i class="fa fa-times" aria-hidden="true"></i></span>
+		</div>
+
+		
+	</section>
+
+
+	<script>
+		window.onload = function(){
+			var preloader = document.getElementById('preloader');
+			preloader.style.display = "none";
+			var menu = document.getElementById('mainMenu');
+			var sand = document.getElementById('sand');
+			var mainEnter = document.getElementById('mainEnter');
+			var shadow = document.getElementById('shadow');
+			var authSection = document.getElementById('authSection');
+			var closeButt = document.getElementById('closeButt');
+
+			sand.addEventListener('click',function(){
+				if (menu.className == "main-menu"){
+					menu.className += " responsive";
+				}
+				else menu.className = "main-menu";
+			});
+			mainEnter.addEventListener('click',function(){
+				if (shadow.style.visibility == 'hidden' || shadow.style.visibility == ''){
+					shadow.style.visibility = 'visible';
+					shadow.style.opacity = '1';
+
+					authSection.style.visibility = 'visible';
+					authSection.style.opacity = '1';
+				}
+
+			});
+			closeButt.addEventListener('click',function(){
+				authSection.style.visibility = 'hidden';
+				authSection.style.opacity = '0';
+				shadow.style.visibility = 'hidden';
+				shadow.style.opacity = '0';
+			})
+		}
 
 	</script>
 </body>

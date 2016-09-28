@@ -1,4 +1,4 @@
-//изменить цвет шрифта меню и рег филда
+//сделать прелоадер
 @import 'mixins/vendor-prefix';
 $font:'Roboto', sans-serif;
 $menucolor:#495156;
@@ -26,11 +26,31 @@ a{
 		text-decoration:none;
 	}
 }
-body{
+input {outline:none;}
 
+#shadow{
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	z-index: 10;
+	@include vendor-prefix('transition','visibility .4s.opacity .4s');
 }
 
+body{
+	font-family: $font;
+}
+#preloader{
+	position: fixed;
+	top: 50%;
+	left: calc(50% - 32px);
+	@include vendor-prefix('transform','translateY(-50%)');
+
+}
 .main-header{
+	position: fixed;
 	overflow: hidden;
 	width: 100%;
 	background:#85c1e5;
@@ -49,53 +69,48 @@ body{
 
 .main-menu{
 	
-		width: 80%;
-		float: left;
-		ul{
-			li{
-				color: $menucolor;
-				font-family: $font;
-				font-weight: bold;
-				font-size: 20px;
-				padding: 12px 5px;
-				display: inline-block;
-				letter-spacing: 1.5px;
+	width: 80%;
+	float: left;
+	ul{
+		li{
+			color: $menucolor;
+			font-family: $font;
+			font-weight: bold;
+			font-size: 20px;
+			padding: 12px 5px;
+			display: inline-block;
+			letter-spacing: 1.5px;
 
-				a{
-					position: relative;
-					&:hover::before{
-						webkit-transform: scaleX(1);
-						transform: scaleX(1);
-						visibility: visible;
-					}
-					&::before{
-						content: "";
-						width: 100%;
-						height: 2px;
-						background-color: #e05d60;
-						position: absolute;
-						left: 0; bottom: -7px; right: 0;
-
-						@include vendor-prefix('all','.3s ease');
-						-webkit-transition: all 0.35s ease-in-out 0s;
-						-webkit-transform: scaleX(0);
-
-						transition: all 0.35s ease-in-out 0s;
-						transform: scaleX(0);
-						visibility: hidden;
-					}
-					&:hover{
-						cursor: pointer;
-						color: $regfieldcolor;
-					}
-
+			a{
+				position: relative;
+				&:hover::before{
+					@include vendor-prefix('transform','scaleX(1)');
+					visibility: visible;
 				}
+				&::before{
+					content: "";
+					width: 100%;
+					height: 2px;
+					background-color: #e05d60;
+					position: absolute;
+					left: 0; bottom: -7px; right: 0;
+
+					@include vendor-prefix('transition','all .3s ease');
+					@include vendor-prefix('transform','scaleX(0)');
+					visibility: hidden;
+				}
+				&:hover{
+					cursor: pointer;
+					color: $regfieldcolor;
+				}
+
 			}
 		}
-		.reg-field{
-			float: right;
-			color: $regfieldcolor;
-		}
+	}
+	.reg-field{
+		float: right;
+		color: $regfieldcolor;
+	}
 	
 }
 
@@ -109,4 +124,110 @@ body{
 		margin:5px;
 		@include vendor-prefix('border-radius','2px');
 	}
+}
+
+//styles for authorization window
+.auth-window{
+	padding: 20px;
+	font-size: 22px;
+	background: #fff;
+	border:2px solid #ebeef3;
+	@include vendor-prefix('border-radius','10px');
+	.auth-form{
+		width: 70%;
+		margin: 0 auto;
+	}
+	.auth-label{
+		text-align: left;
+		display: block;
+		margin: 20px 0 10px 0;
+	}
+	.auth-input{
+		width: 100%;
+		padding: 7px;
+		font-size: 22px;
+		font-weight: bold;
+		border: 1px solid #D2D9DC;
+		@include vendor-prefix('border-radius','5px');
+		@include vendor-prefix('box-shadow','inset 2px 2px 6px #EBEBEB, 0 0 0 5px #F7F9FA');
+		&:focus{
+			border-color: #c2f1ff;
+			@include vendor-prefix('box-shadow', 'inset 2px 2px 6px #EBEBEB, 0 0 4px #D0E6F6, 0 0 0 5px #F2F8FC');
+		}
+	}
+	.forgot-pswd{
+		float: right;
+		text-align: right;
+		color: $menucolor;
+		margin: 5px 0 0 20px;
+		font-size: 15px;
+		&:hover{
+			text-decoration:underline;
+			color: black;
+			cursor: pointer;
+		}
+	}
+	.rem-me{
+		float: left;
+		text-align: left;
+		color: $menucolor;
+		margin: 5px 5px 20px 0;
+		font-size: 15px;
+		#auth-checkbox{
+			margin: 2px 5px;
+			 transform:scale(1.3)
+		}
+	}
+	.soc-icon{
+		margin: 15px 0;
+		text-align: center;
+		color: $menucolor;
+		@include vendor-prefix('transition','color .3s');
+		&:hover{
+			cursor:pointer;
+			color: black;
+		}
+	}
+	.enter-butt{
+		margin-top: 35px;
+		text-align: right;
+		button{
+			color:#ebeef3;
+			@include vendor-prefix('border-radius', '5px');
+			outline: none;
+			padding: 12px;
+			font-size: 20px;
+			background: #85c1e5;
+			border:none;
+			@include vendor-prefix('transition', 'all .3s');
+			&:hover{
+				cursor:pointer;
+				color: white;
+				@include vendor-prefix('box-shadow','1px 1px 5px 0px rgba(0,0,0,0.75)');
+			}
+		}
+	}
+	#closeButt{
+		color: $menucolor;
+		font-size: 25px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		&:hover{
+			cursor:pointer;
+			color: black;
+		}
+	}
+}
+.auth-section{
+	
+	visibility: hidden;
+	opacity: 0;
+	width: 30%;
+	z-index: 20;
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	@include vendor-prefix('transform','translateY(-50%)');
+	@include vendor-prefix('transition','visibility .3s,opacity .3s');
 }
