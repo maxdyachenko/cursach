@@ -1,4 +1,4 @@
-//сделать прелоадер
+
 @import 'mixins/vendor-prefix';
 $font:'Roboto', sans-serif;
 $menucolor:#495156;
@@ -159,7 +159,7 @@ body{
 		float: right;
 		text-align: right;
 		color: $menucolor;
-		margin: 5px 0 0 20px;
+		margin: 5px 0 20px 0px;
 		font-size: 15px;
 		&:hover{
 			text-decoration:underline;
@@ -189,7 +189,7 @@ body{
 		}
 	}
 	.enter-butt{
-		margin-top: 35px;
+		margin-top: 45px;
 		text-align: right;
 		button{
 			color:#ebeef3;

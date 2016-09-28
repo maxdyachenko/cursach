@@ -7,7 +7,7 @@
 	//responsive header
 	.main-header{
 		.main-logo{
-			width: 40%;
+			width: 50%;
 		}
 	}
 	.sandwich{
@@ -47,6 +47,32 @@
 			float: none;
 		}
 	}
+
+	//responsive auth modal window
+	.auth-section{
+		width: 90%;
+		left: 5%;
+	}
+	.auth-window{
+		.forgot-pswd{
+			text-align: center;
+			float: none;
+		}
+		.rem-me{
+			margin-top: 10px;
+			text-align: center;
+			float: none;
+		}
+		.auth-form{
+			width: 95%;
+		}
+		.enter-butt{
+			text-align: center;
+		}
+		.soc-icon{
+			font-size: 15px;
+		}
+	}
 	
 }
 
@@ -58,7 +84,10 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px)  {
-	
+	.auth-section{
+		width: 60%;
+		left: 20%;
+	}
 	
 
 
@@ -79,6 +108,10 @@
 	.main-menu{
 		width: 100%;
 	}
+	.auth-section{
+		width: 54%;
+		left: 23%;
+	}
 
 }
 
@@ -94,9 +127,16 @@
 	.main-menu{
 		width: 80%;
 	}
+	.auth-section{
+		width: 44%;
+		left: 28%;
+	}
 
 }
 
 @media only screen and (min-width : 1400px) {
-
+	.auth-section{
+		width: 34%;
+		left: 33%;
+	}
 }

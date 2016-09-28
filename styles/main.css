@@ -166,7 +166,7 @@ body {
     float: right;
     text-align: right;
     color: #495156;
-    margin: 5px 0 0 20px;
+    margin: 5px 0 20px 0px;
     font-size: 15px; }
     .auth-window .forgot-pswd:hover {
       text-decoration: underline;
@@ -194,7 +194,7 @@ body {
       cursor: pointer;
       color: black; }
   .auth-window .enter-butt {
-    margin-top: 35px;
+    margin-top: 45px;
     text-align: right; }
     .auth-window .enter-butt button {
       color: #ebeef3;
