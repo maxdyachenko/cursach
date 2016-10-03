@@ -15,14 +15,13 @@
     width: 100%; }
     .responsive ul li {
       float: none;
-      display: inline; }
-      .responsive ul li a {
-        padding: 5px;
-        display: block;
-        text-align: center; }
-        .responsive ul li a::before {
-          transition: none;
-          height: 0px; }
+      display: inline;
+      padding: 8px;
+      display: block;
+      text-align: center; }
+      .responsive ul li::before {
+        transition: none;
+        height: 0px; }
     .responsive .reg-field {
       float: none; }
 

@@ -27,8 +27,8 @@
 						<li><a href="#">Щось ще</a></li>
 						<li><a href="#">Щось ще</a></li>
 						<li><a href="#">FAQ</a></li>
-						<li class="reg-field"><a href="#">Реєстрація</a></li>
-						<li class="reg-field" id="mainEnter"><a href="#">Вхід</a></li>
+						<li class="reg-field" id="regButton">Реєстрація</li>
+						<li class="reg-field" id="authButton">Вхід</li>
 					</ul>
 				</nav>
 
@@ -48,9 +48,9 @@
 		<div class="auth-window">
 			<form action="" method="POST" class="auth-form">
 				<label class="auth-label" for="login">Логін</label>
-				<input class="auth-input" type="text" placeholder="Your login" id="login">
+				<input class="auth-input" type="text" placeholder="Your login" id="login" required>
 				<label class="auth-label" for="password">Пароль</label>
-				<input class="auth-input" type="password" placeholder="***" id="password">
+				<input class="auth-input" type="password" placeholder="***" id="password" required>
 				<div class="rem-me">
 					<label for="auth-checkbox">Запам'ятати мене<input type="checkbox" id="auth-checkbox"></label>
 				</div>
@@ -59,7 +59,7 @@
 				</div>
 
 
-				<div class="enter-butt"><button>Увійти</button></div>
+				<div class="enter-butt"><input type="submit" name="submit" value="Увійти"></div>
 				<div class="soc-icon">
 					<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
 					<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
@@ -67,21 +67,52 @@
 			</form>
 			<span id="closeButt"><i class="fa fa-times" aria-hidden="true"></i></span>
 		</div>
+	</section>
 
-		
+	<section class="auth-section" id="regSection">
+		<div class="auth-window">
+			<form action="" method="POST" class="auth-form">
+				<label class="auth-label" for="login">Логін</label>
+				<input class="auth-input" type="text" placeholder="Your login" id="login" pattern=".{3,}" required title="3 characters minimum">
+
+				<label class="auth-label" for="email">Емейл</label>
+				<input class="auth-input" type="email" placeholder="example@gmail.com" id="email" required>
+
+				<label class="auth-label" for="pswd">Пароль</label>
+				<input class="auth-input" type="password" placeholder="***" id="pswd" pattern=".{5,}" required title="5 characters minimum">
+
+				<label class="auth-label" for="repeatpswd">Підтвердіть пароль</label>
+				<input class="auth-input" type="password" placeholder="***" id="repeatpswd" pattern=".{5,}" required title="5 characters minimum">
+
+				<div class="enter-butt"><input type="submit" value="Зареєструватися" id="regMe"></div>
+
+				<div class="soc-icon">
+					<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
+					<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
+				</div>
+
+			</form>
+			<span id="closeButt1"><i class="fa fa-times" aria-hidden="true"></i></span>
+		</div>
 	</section>
 
 
 	<script>
 		window.onload = function(){
+			//everything for modal windows of auth and reg form
 			var preloader = document.getElementById('preloader');
 			preloader.style.display = "none";
 			var menu = document.getElementById('mainMenu');
 			var sand = document.getElementById('sand');
-			var mainEnter = document.getElementById('mainEnter');
+			var authButton = document.getElementById('authButton');
+			var regButton = document.getElementById('regButton');
 			var shadow = document.getElementById('shadow');
 			var authSection = document.getElementById('authSection');
+			var regSection = document.getElementById('regSection');
 			var closeButt = document.getElementById('closeButt');
+			var closeButt1 = document.getElementById('closeButt1');
+			var regMe = document.getElementById('regMe');
+			var repeatpswd = document.getElementById('repeatpswd');
 
 			sand.addEventListener('click',function(){
 				if (menu.className == "main-menu"){
@@ -89,7 +120,7 @@
 				}
 				else menu.className = "main-menu";
 			});
-			mainEnter.addEventListener('click',function(){
+			authButton.addEventListener('click',function(){
 				if (shadow.style.visibility == 'hidden' || shadow.style.visibility == ''){
 					shadow.style.visibility = 'visible';
 					shadow.style.opacity = '1';
@@ -99,12 +130,52 @@
 				}
 
 			});
-			closeButt.addEventListener('click',function(){
-				authSection.style.visibility = 'hidden';
-				authSection.style.opacity = '0';
+			regButton.addEventListener('click',function(){
+				if (shadow.style.visibility == 'hidden' || shadow.style.visibility == ''){
+					shadow.style.visibility = 'visible';
+					shadow.style.opacity = '1';
+
+					regSection.style.visibility = 'visible';
+					regSection.style.opacity = '1';
+				}
+
+			});
+
+			repeatpswd.addEventListener('blur',testPswdField);
+			repeatpswd.addEventListener('input',testPswdField);
+
+			function testPswdField(){
+				console.log();
+				if (repeatpswd.value != document.getElementById('pswd').value){
+					regMe.disabled = true;
+					repeatpswd.style.borderColor = "red";
+				}
+				else{
+					regMe.disabled = false;
+					repeatpswd.style.borderColor = "#D2D9DC";
+				}
+
+			}
+			closeButt.addEventListener('click',closeButtHandler);
+			closeButt1.addEventListener('click',closeButtHandler);
+
+			function closeButtHandler(){
+				var id;
+				if (authSection.style.visibility == "visible"){
+					id = authSection;
+				}
+				else{
+					id = regSection;
+				}
+				console.log(id);
+				id.style.visibility = 'hidden';
+				id.style.opacity = '0';
 				shadow.style.visibility = 'hidden';
 				shadow.style.opacity = '0';
-			})
+			
+			}
+
+			//here is script for validation input field password and repeat password
 		}
 
 	</script>
