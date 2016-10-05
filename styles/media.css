@@ -1,4 +1,8 @@
 @media only screen and (min-width: 320px) and (max-width: 992px) {
+  * {
+    transition: none;
+    animation: none; }
+
   .main-header .main-logo {
     width: 50%; }
 
@@ -19,10 +23,9 @@
       padding: 8px;
       display: block;
       text-align: center; }
-      .responsive ul li::before {
-        transition: none;
-        height: 0px; }
     .responsive .reg-field {
+      float: none; }
+    .responsive .private-butt {
       float: none; }
 
   .auth-section {
@@ -41,7 +44,15 @@
   .auth-window .enter-butt {
     text-align: center; }
   .auth-window .soc-icon {
-    font-size: 15px; } }
+    font-size: 15px; }
+
+  .wrapper-bg .user-photo {
+    margin: 20px auto;
+    float: none; }
+  .wrapper-bg .user-info {
+    float: none;
+    margin-top: 50px !important;
+    text-align: center; } }
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {

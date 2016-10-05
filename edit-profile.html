@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>E-dictation</title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/grid/grid.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/media.css">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<div class="content">
+		<div class="content-inside">
+			<div id="preloader"><i class="fa fa-spinner fa-2x"></i></div>
+			<header class="main-header">
+				<div class="container header-content">
+					<div class="row">
+
+						<h1 class="main-logo"><a href="#">E-dictation</a></h1>
+
+
+						<nav class="main-menu" id="mainMenu">
+							<ul>
+								<li><a href="#">Диктанти</a></li>
+								<li><a href="#">Рейтинг</a></li>
+								<li><a href="#">Щось ще</a></li>
+								<li><a href="#">Щось ще</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li class="private-butt"><a href="profile.html">Особистий кабінет</a></li>
+
+							</ul>
+						</nav>
+
+
+						<span class="sandwich" id="sand">
+							<div></div>
+							<div></div>
+							<div></div>
+						</span>
+					</div>
+				</div>
+
+			</header>
+
+
+			<div id="shadow"></div>
+
+			<div class="container wrapper-bg">
+					<form action="" method="POST" class="edit-form">
+						<div class="edit-photo-wrapper">
+							<div class="edit-photo">
+								<img src="img/no-avatar.png" alt="user-avatar">
+							</div>
+							<input type="file">
+						</div>
+						<div class="edit-name">
+							<label for="full-name">Ваше повне ім'я</label>
+							<input type="text" id="full-name">
+						</div>
+
+						<div class="edit-email">
+							<label for="edit-email">Ваше email</label>
+							<input type="email" id="edit-email">
+						</div>
+
+						<div class="edit-edu">
+							<label for="edit-edu">Ваше місце навчання</label>
+							<input type="text" id="edit-edu">
+						</div>
+
+						<div class="edit-living">
+							<label for="edit-living">Ваше місто</label>
+							<input type="text" id="edit-living">
+						</div>
+
+						<div class="edit-country">
+							<label for="edit-country">Країна</label>
+							<input type="text" id="edit-country">
+						</div>
+
+						<div class="last-pswd">
+							<label for="last-pswd">Старий пароль</label>
+							<input type="password" id="last-pswd">
+						</div>
+						<div class="edit-pswd">
+							<label for="edit-pswd">Новий пароль</label>
+							<input type="password" id="edit-pswd" pattern=".{5,}" title="5 characters minimum">
+						</div>
+
+						<input type="submit" value="Оновити" class="edit-butt">
+					</form>
+			</div>
+			
+		</div><!-- content inside -->
+	</div><!-- content -->
+
+	<footer class="main-footer">
+		<div class="authors">
+			&copy; <a href="#">Д'яченко Максим</a> / <a href="#">Боженко Роман</a>
+		</div>
+	</footer>
+
+	<script src="js/everything-here.js"></script>
+</body>
+</html>
