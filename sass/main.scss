@@ -7,15 +7,14 @@
 
 //styles for private cabinet
 .wrapper-bg{
-	//padding: 40px 0;
+	padding: 30px;
 	position: relative;
-	margin-top: 15px;
+	margin-top:-50px;
 	margin-bottom: 15px;
 	background: #fff;
-	border:2px solid #ebeef3;
-	@include vendor-prefix('box-shadow', '3px 3px 5px 0px rgba(0,0,0,0.75)');
-	@include vendor-prefix('border-radius','5px');
+	@include vendor-prefix('box-shadow', '3px 3px 5px 0px rgba(0,0,0,0.25)');
 	.edit-profile{
+		font-size: 25px;
 		position: absolute;
 		top: 20px;
 		right: 20px;
@@ -26,45 +25,91 @@
 		}
 	}
 	.user-name{
+		border-bottom: 1px solid $bordercolor;
+		padding-bottom: 20px;
 		font-size: 24px;
 		word-wrap: break-word;
 		//max-width: 70%;
 		color: #262626;
 		margin:0 auto 20px 0;
-		//text-align: center;
+		text-align: center;
 		letter-spacing: 2px;
 	}
-	.user-photo{
-		float: left;
-		//margin: auto;
-		margin-right: 35px;
-		width: 200px;
-		background: #242321;
-		//@include vendor-prefix('border-radius','200px');
-		@include vendor-prefix('box-shadow', '3px 4px 5px 0px rgba(0,0,0,0.75)');
-		.user-avatar{
-			width: 200px;
-			height: 200px;
-			max-width: 100%;
-			@include vendor-prefix('background-size','cover');
+	.wrapper-user-info{
+		overflow: hidden;
+		padding-bottom: 20px;
+		.user-photo{
+			float: left;
+			//margin: auto;
+			margin-right: 35px;
+			width: 150px;
+			background: #242321;
+			//@include vendor-prefix('border-radius','200px');
+			//@include vendor-prefix('box-shadow', '3px 4px 5px 0px rgba(0,0,0,0.75)');
+			.user-avatar{
+				width: 150px;
+				height: 150px;
+				max-width: 100%;
+				@include vendor-prefix('background-size','cover');
+			}
+		}
+		.user-info{
+			float: left;
+			font-size: 18px;
+			ul{
+				display: inline-block;
+				li{
+					letter-spacing: 1px;
+					color: #b7c2ce;
+					padding-bottom: 13px;
+					.icon-info{
+						padding-right: 7px;
+					}
+					.key{
+						margin-left: 5px;
+						color: black;
+						font-weight: bold;
+					}
+				}
+			} 
 		}
 	}
-	.user-info{
-		float: left;
+	.user-achievments{
+		font-weight: bold;
+		letter-spacing: 1px;
+		color: #d59f01;
 		font-size: 18px;
+		padding-top: 5px;
+		text-align: center;
+		border-top: 1px solid $bordercolor;
+
 		ul{
-			display: inline-block;
+			display:inline-block;
 			li{
-				letter-spacing: 1px;
-				color: #b7c2ce;
-				padding-bottom: 13px;
-				.icon-info{
-					padding-right: 7px;
+				display: inline-block;
+				text-align: center;
+				padding: 15px;
+				position: relative;
+				&:before {
+					content: "";
+					width: 100%;
+					height: 2px;
+					background-color: #d59f01;
+					position: absolute;
+					left: 0; bottom: 0px; right: 0;
+					@include vendor-prefix('transition','all 0.3s ease-in-out 0s');
+					@include vendor-prefix('transform','scaleX(0)');
+					visibility: hidden;
 				}
-				.key{
-					margin-left: 5px;
-					color: black;
-					font-weight: bold;
+				&:hover:before  {
+					@include vendor-prefix('transform','scaleX(1)');
+					visibility: visible;
+				}
+				a{
+					display: block;
+					.user-mark{
+						font-size: 24px;
+					}
 				}
 			}
 		}

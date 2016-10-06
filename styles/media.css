@@ -1,6 +1,14 @@
 @media only screen and (min-width: 320px) and (max-width: 992px) {
   * {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
     transition: none;
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    -o-animation: none;
     animation: none; }
 
   .main-header .main-logo {
@@ -46,13 +54,16 @@
   .auth-window .soc-icon {
     font-size: 15px; }
 
-  .wrapper-bg .user-photo {
+  .wrapper-bg .wrapper-user-info .user-photo {
     margin: 20px auto;
     float: none; }
-  .wrapper-bg .user-info {
+  .wrapper-bg .wrapper-user-info .user-info {
     float: none;
     margin-top: 50px !important;
-    text-align: center; } }
+    text-align: center; }
+
+  .user-achievments ul li {
+    display: block !important; } }
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {

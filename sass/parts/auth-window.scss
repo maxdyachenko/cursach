@@ -32,7 +32,6 @@
 	.forgot-pswd{
 		float: right;
 		text-align: right;
-		color: $menucolor;
 		margin: 5px 0 20px 0px;
 		font-size: 15px;
 		&:hover{
@@ -44,7 +43,6 @@
 	.rem-me{
 		float: left;
 		text-align: left;
-		color: $menucolor;
 		margin: 5px 5px 20px 0;
 		font-size: 15px;
 		#auth-checkbox{

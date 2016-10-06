@@ -1,9 +1,9 @@
-
+@import 'mixins/vendor-prefix';
 @media only screen and (min-width : 320px) and (max-width: 992px){
 	//disable animation for mobile devices
 	* {
-		transition: none;
-		animation: none;
+		@include vendor-prefix('transition','none');
+		@include vendor-prefix('animation','none');
 	}
 	//responsive header
 	.main-header{
@@ -74,14 +74,26 @@
 
 	//responsive private cabinet
 	.wrapper-bg{
-		.user-photo{
-			margin: 20px auto;
-			float: none;
+		.wrapper-user-info{
+			.user-photo{
+				margin: 20px auto;
+				float: none;
+			}
+			.user-info{
+				float: none;
+				margin-top: 50px !important;
+				text-align: center;
+			}
 		}
-		.user-info{
-			float: none;
-			margin-top: 50px !important;
-			text-align: center;
+	}
+
+
+	//responsive user achievments
+	.user-achievments{
+		ul{
+			li{
+				display: block !important;
+			}
 		}
 	}
 	

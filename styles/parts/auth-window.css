@@ -1,23 +1,39 @@
 /*
-Error: File to import not found or unreadable: variables.
-       Load path: c:/cursach/sass
-        on line 2 of sass/parts/auth-window.scss
+Error: Undefined mixin 'vendor-prefix'.
+        on line 8 of sass/parts/auth-window.scss, in `vendor-prefix'
+        from line 8 of sass/parts/auth-window.scss
 
-1: //styles for authorization window
-2: @import 'variables';
 3: .auth-window{
 4: 	padding: 20px;
 5: 	font-size: 22px;
 6: 	background: #fff;
 7: 	border:2px solid #ebeef3;
+8: 	@include vendor-prefix('border-radius','10px');
+9: 	.auth-form{
+10: 		width: 70%;
+11: 		margin: 0 auto;
+12: 	}
+13: 	.auth-label{
 
 Backtrace:
-sass/parts/auth-window.scss:2
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:67:in `rescue in import'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:45:in `import'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:28:in `imported_file'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/import_node.rb:37:in `css_import?'
-C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+sass/parts/auth-window.scss:8:in `vendor-prefix'
+sass/parts/auth-window.scss:8
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
 C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
@@ -53,4 +69,4 @@ C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: variables.\A        Load path: c:/cursach/sass\A         on line 2 of sass/parts/auth-window.scss\A \A 1: //styles for authorization window\A 2: @import 'variables';\A 3: .auth-window{\A 4: 	padding: 20px;\A 5: 	font-size: 22px;\A 6: 	background: #fff;\A 7: 	border:2px solid #ebeef3;"; }
+  content: "Error: Undefined mixin 'vendor-prefix'.\A         on line 8 of sass/parts/auth-window.scss, in `vendor-prefix'\A         from line 8 of sass/parts/auth-window.scss\A \A 3: .auth-window{\A 4: 	padding: 20px;\A 5: 	font-size: 22px;\A 6: 	background: #fff;\A 7: 	border:2px solid #ebeef3;\A 8: 	@include vendor-prefix('border-radius','10px');\A 9: 	.auth-form{\A 10: 		width: 70%;\A 11: 		margin: 0 auto;\A 12: 	}\A 13: 	.auth-label{"; }
