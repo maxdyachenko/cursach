@@ -75,9 +75,8 @@
 		}
 	}
 	.user-achievments{
-		font-weight: bold;
 		letter-spacing: 1px;
-		color: #d59f01;
+		color: #D59F53;
 		font-size: 18px;
 		padding-top: 5px;
 		text-align: center;
@@ -113,37 +112,28 @@
 				}
 			}
 		}
+		.user-mark{
+			font-weight: bold;
+			color: #d59f01;
+		}
 	}
 }
 
 
 
 //styles edit profile
-.edit-photo-wrapper{
-	.edit-photo{
-		display: inline-block;
-		width: 200px;
-		height: 200px;
-		background: #000;
-		@include vendor-prefix('background-size','cover') ;
-	}
-	input{
-		display: inline-block;
-	}
-}
+
 .edit-form{
 	padding: 10px;
 	label{
-		font-weight: bold;
 		text-align: left;
 		display: block;
 		margin: 20px 0 10px 0;
 	}
-	input{
+	.text-input{
 		width: 100%;
 		padding: 7px;
 		font-size: 22px;
-		font-weight: bold;
 		border: 1px solid #D2D9DC;
 		@include vendor-prefix('border-radius','5px');
 		@include vendor-prefix('box-shadow','inset 2px 2px 6px #EBEBEB, 0 0 0 5px #F7F9FA');
@@ -152,5 +142,34 @@
 			@include vendor-prefix('box-shadow', 'inset 2px 2px 6px #EBEBEB, 0 0 4px #D0E6F6, 0 0 0 5px #F2F8FC');
 		}
 	}
+	.edit-photo-wrapper{
+		.edit-photo{
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+			background: #000;
+			@include vendor-prefix('background-size','cover') ;
+		}
+		.change-photo{
+			display: inline-block;
+		}
+	}
+	.edit-butt{
+		
+		width: 100%;
+		padding: 7px;
+		font-size: 22px;
+		border: 1px solid #d59f01;
+		margin-top: 20px;
+		background: $buttonbg;
+		color: $unhovered;
+		@include vendor-prefix('border-radius','5px');
+		@include vendor-prefix('box-shadow',' 2px 2px 6px 0px #ebebeb');
+		&:hover{
+			cursor:pointer;
+			color: $onhovered;
+		}
+	}
+
 }
 

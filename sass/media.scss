@@ -22,6 +22,9 @@
 			li{
 				display: none;
 			}
+			.reg-field{
+				display: none;
+			}
 		}
 
 	}
@@ -30,16 +33,15 @@
 		ul{
 			li{
 				float: none;
-				display: inline;
-				
+				display: inline;		
 				padding: 8px;
 				display: block;
 				text-align: center;
-
 			}
 		}
 		.reg-field{
 			float: none;
+			display: inline !important;
 		}
 		.private-butt{
 			float: none;

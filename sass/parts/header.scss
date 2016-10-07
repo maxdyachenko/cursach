@@ -102,17 +102,10 @@ body{
 		}
 	}
 	.reg-field{
-		padding: 5px 10px;
 		float: right;
 		color: $regfieldcolor;
-		font-size: 20px;
 		display: block;
 		letter-spacing: 1.5px;
-		&:hover{
-			background:rgba(0,0,0,0.55);
-			@include vendor-prefix('border-radius','4px');
-			cursor: pointer;			
-		}
 	}
 	.private-butt{
 		float:right;

@@ -17,89 +17,93 @@
 <body>
 	<div id="preloader"><i class="fa fa-spinner fa-2x"></i></div>
 	<div id="shadow"></div>
-	<header class="main-header">
-		<div class="container header-content">
-			<div class="row">
+	<div class="content">
+		<div class="content-inside">
+			<header class="main-header">
+				<div class="container header-content">
+					<div class="row">
 
-				<h1 class="main-logo"><a href="#">LOGO</a></h1>
-
-
-				<nav class="main-menu" id="mainMenu">
-					<ul>
-						<li><a href="#">Диктанти</a></li>
-						<li><a href="#">Рейтинг</a></li>
-						<li><a href="#">Щось ще</a></li>
-						<li><a href="#">Щось ще</a></li>
-						<li><a href="#">FAQ</a></li>
-						<li class="reg-field" id="regButton">Реєстрація</li>
-						<li class="reg-field" id="authButton">Вхід</li>
-					</ul>
-				</nav>
+						<h1 class="main-logo"><a href="#">LOGO</a></h1>
 
 
-				<span class="sandwich" id="sand">
-					<div></div>
-					<div></div>
-					<div></div>
-				</span>
+						<nav class="main-menu" id="mainMenu">
+							<ul>
+								<li><a href="#">Диктанти</a></li>
+								<li><a href="#">Рейтинг</a></li>
+								<li><a href="#">Щось ще</a></li>
+								<li><a href="#">Щось ще</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li class="reg-field" id="regButton"><a href="javascript:void(0)">Реєстрація</a></li>
+								<li class="reg-field" id="authButton"><a href="javascript:void(0)">Вхід</a></li>
+							</ul>
+						</nav>
+
+
+						<span class="sandwich" id="sand">
+							<div></div>
+							<div></div>
+							<div></div>
+						</span>
+					</div>
+				</div>
+
+			</header>
+
+			<div class="content">
+				<section class="auth-section" id="authSection">
+
+					<div class="auth-window">
+						<form action="" method="POST" class="auth-form">
+							<label class="auth-label" for="login">Логін</label>
+							<input class="auth-input" type="text" placeholder="Your login" id="login" required>
+							<label class="auth-label" for="password">Пароль</label>
+							<input class="auth-input" type="password" placeholder="***" id="password" required>
+							<div class="rem-me">
+								<label for="auth-checkbox">Запам'ятати мене<input type="checkbox" id="auth-checkbox"></label>
+							</div>
+							<div class="forgot-pswd">
+								<span>Забули пароль?</span>
+							</div>
+
+
+							<div class="enter-butt"><input type="submit" name="submit" value="Увійти"></div>
+							<div class="soc-icon">
+								<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
+								<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
+							</div>
+						</form>
+						<span id="closeButt"><i class="fa fa-times" aria-hidden="true"></i></span>
+					</div>
+				</section>
+
+				<section class="auth-section" id="regSection">
+					<div class="auth-window">
+						<form action="" method="POST" class="auth-form">
+							<label class="auth-label" for="login">Логін</label>
+							<input class="auth-input" type="text" placeholder="Your login" id="login" pattern=".{3,}" required title="3 characters minimum">
+
+							<label class="auth-label" for="email">Емейл</label>
+							<input class="auth-input" type="email" placeholder="example@gmail.com" id="email" required>
+
+							<label class="auth-label" for="pswd">Пароль</label>
+							<input class="auth-input" type="password" placeholder="***" id="pswd" pattern=".{5,}" required title="5 characters minimum">
+
+							<label class="auth-label" for="repeatpswd">Підтвердіть пароль</label>
+							<input class="auth-input" type="password" placeholder="***" id="repeatpswd" pattern=".{5,}" required title="5 characters minimum">
+
+							<div class="enter-butt"><input type="submit" value="Зареєструватися" id="regMe"></div>
+
+							<div class="soc-icon">
+								<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
+								<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
+							</div>
+
+						</form>
+						<span id="closeButt1"><i class="fa fa-times" aria-hidden="true"></i></span>
+					</div>
+				</section>
 			</div>
 		</div>
-
-	</header>
-
-	<div class="content">
-		<section class="auth-section" id="authSection">
-
-			<div class="auth-window">
-				<form action="" method="POST" class="auth-form">
-					<label class="auth-label" for="login">Логін</label>
-					<input class="auth-input" type="text" placeholder="Your login" id="login" required>
-					<label class="auth-label" for="password">Пароль</label>
-					<input class="auth-input" type="password" placeholder="***" id="password" required>
-					<div class="rem-me">
-						<label for="auth-checkbox">Запам'ятати мене<input type="checkbox" id="auth-checkbox"></label>
-					</div>
-					<div class="forgot-pswd">
-						<span>Забули пароль?</span>
-					</div>
-
-
-					<div class="enter-butt"><input type="submit" name="submit" value="Увійти"></div>
-					<div class="soc-icon">
-						<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
-						<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
-					</div>
-				</form>
-				<span id="closeButt"><i class="fa fa-times" aria-hidden="true"></i></span>
-			</div>
-		</section>
-
-		<section class="auth-section" id="regSection">
-			<div class="auth-window">
-				<form action="" method="POST" class="auth-form">
-					<label class="auth-label" for="login">Логін</label>
-					<input class="auth-input" type="text" placeholder="Your login" id="login" pattern=".{3,}" required title="3 characters minimum">
-
-					<label class="auth-label" for="email">Емейл</label>
-					<input class="auth-input" type="email" placeholder="example@gmail.com" id="email" required>
-
-					<label class="auth-label" for="pswd">Пароль</label>
-					<input class="auth-input" type="password" placeholder="***" id="pswd" pattern=".{5,}" required title="5 characters minimum">
-
-					<label class="auth-label" for="repeatpswd">Підтвердіть пароль</label>
-					<input class="auth-input" type="password" placeholder="***" id="repeatpswd" pattern=".{5,}" required title="5 characters minimum">
-
-					<div class="enter-butt"><input type="submit" value="Зареєструватися" id="regMe"></div>
-
-					<div class="soc-icon">
-						<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
-						<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
-					</div>
-
-				</form>
-				<span id="closeButt1"><i class="fa fa-times" aria-hidden="true"></i></span>
-			</div>
-		</section>
 	</div>
 
 	<footer class="main-footer">
@@ -108,6 +112,6 @@
 		</div>
 	</footer>
 
-	<script src="js/everything-here.js"></script>
+	<script src="js/open-menu.js"></script>
 </body>
 </html>
