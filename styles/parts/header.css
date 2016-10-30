@@ -1,23 +1,23 @@
 /*
 Error: Undefined mixin 'vendor-prefix'.
-        on line 38 of sass/parts/header.scss, in `vendor-prefix'
-        from line 38 of sass/parts/header.scss
+        on line 40 of sass/parts/header.scss, in `vendor-prefix'
+        from line 40 of sass/parts/header.scss
 
-33: 	position: fixed;
-34: 	width: 100%;
-35: 	height: 100%;
-36: 	background: rgba(0,0,0,0.5);
-37: 	z-index: 10;
-38: 	@include vendor-prefix('transition','visibility .4s.opacity .4s');
-39: }
-40: html{
-41: 	height: 100%;
-42: }
-43: body{
+35: 	position: fixed;
+36: 	width: 100%;
+37: 	height: 100%;
+38: 	background: rgba(0,0,0,0.5);
+39: 	z-index: 10;
+40: 	@include vendor-prefix('transition','visibility .4s.opacity .4s');
+41: }
+42: html{
+43: 	height: 100%;
+44: }
+45: body{
 
 Backtrace:
-sass/parts/header.scss:38:in `vendor-prefix'
-sass/parts/header.scss:38
+sass/parts/header.scss:40:in `vendor-prefix'
+sass/parts/header.scss:40
 C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
@@ -69,4 +69,4 @@ C:/Ruby23/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'vendor-prefix'.\A         on line 38 of sass/parts/header.scss, in `vendor-prefix'\A         from line 38 of sass/parts/header.scss\A \A 33: 	position: fixed;\A 34: 	width: 100%;\A 35: 	height: 100%;\A 36: 	background: rgba(0,0,0,0.5);\A 37: 	z-index: 10;\A 38: 	@include vendor-prefix('transition','visibility .4s.opacity .4s');\A 39: }\A 40: html{\A 41: 	height: 100%;\A 42: }\A 43: body{"; }
+  content: "Error: Undefined mixin 'vendor-prefix'.\A         on line 40 of sass/parts/header.scss, in `vendor-prefix'\A         from line 40 of sass/parts/header.scss\A \A 35: 	position: fixed;\A 36: 	width: 100%;\A 37: 	height: 100%;\A 38: 	background: rgba(0,0,0,0.5);\A 39: 	z-index: 10;\A 40: 	@include vendor-prefix('transition','visibility .4s.opacity .4s');\A 41: }\A 42: html{\A 43: 	height: 100%;\A 44: }\A 45: body{"; }

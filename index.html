@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="styles/grid/grid.css">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" type="text/css" href="styles/media.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<!--[if lt IE 9]>
 	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -49,69 +48,68 @@
 
 			</header>
 
-			<div class="content">
-				<section class="auth-section" id="authSection">
+			<section class="auth-section" id="authSection">
 
-					<div class="auth-window">
-						<form action="" method="POST" class="auth-form">
-							<label class="auth-label" for="login">Логін</label>
-							<input class="auth-input" type="text" placeholder="Your login" id="login" required>
-							<label class="auth-label" for="password">Пароль</label>
-							<input class="auth-input" type="password" placeholder="***" id="password" required>
-							<div class="rem-me">
-								<label for="auth-checkbox">Запам'ятати мене<input type="checkbox" id="auth-checkbox"></label>
-							</div>
-							<div class="forgot-pswd">
-								<span>Забули пароль?</span>
-							</div>
+				<div class="auth-window">
+					<form action="" method="POST" class="auth-form">
+						<label class="auth-label" for="login">Логін</label>
+						<input class="auth-input" type="text" placeholder="Your login" id="login" required>
+						<label class="auth-label" for="password">Пароль</label>
+						<input class="auth-input" type="password" placeholder="***" id="password" required>
+						<div class="rem-me">
+							<label for="auth-checkbox">Запам'ятати мене<input type="checkbox" id="auth-checkbox"></label>
+						</div>
+						<div class="forgot-pswd">
+							<span>Забули пароль?</span>
+						</div>
 
 
-							<div class="enter-butt"><input type="submit" name="submit" value="Увійти"></div>
-							<div class="soc-icon">
-								<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
-								<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
-							</div>
-						</form>
-						<span id="closeButt"><i class="fa fa-times" aria-hidden="true"></i></span>
-					</div>
-				</section>
+						<div class="enter-butt"><input type="submit" name="submit" value="Увійти"></div>
+						<div class="soc-icon">
+							<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
+							<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
+						</div>
+					</form>
+					<span id="closeButt"><i class="fa fa-times" aria-hidden="true"></i></span>
+				</div>
+			</section>
 
-				<section class="auth-section" id="regSection">
-					<div class="auth-window">
-						<form action="" method="POST" class="auth-form">
-							<label class="auth-label" for="login">Логін</label>
-							<input class="auth-input" type="text" placeholder="Your login" id="login" pattern=".{3,}" required title="3 characters minimum">
+			<section class="auth-section" id="regSection">
+				<div class="auth-window">
+					<form action="" method="POST" class="auth-form">
+						<label class="auth-label" for="login">Логін</label>
+						<input class="auth-input" type="text" placeholder="Your login" id="login" pattern=".{3,}" required title="3 characters minimum">
 
-							<label class="auth-label" for="email">Емейл</label>
-							<input class="auth-input" type="email" placeholder="example@gmail.com" id="email" required>
+						<label class="auth-label" for="email">Емейл</label>
+						<input class="auth-input" type="email" placeholder="example@gmail.com" id="email" required>
 
-							<label class="auth-label" for="pswd">Пароль</label>
-							<input class="auth-input" type="password" placeholder="***" id="pswd" pattern=".{5,}" required title="5 characters minimum">
+						<label class="auth-label" for="pswd">Пароль</label>
+						<input class="auth-input" type="password" placeholder="***" id="pswd" pattern=".{5,}" required title="5 characters minimum">
 
-							<label class="auth-label" for="repeatpswd">Підтвердіть пароль</label>
-							<input class="auth-input" type="password" placeholder="***" id="repeatpswd" pattern=".{5,}" required title="5 characters minimum">
+						<label class="auth-label" for="repeatpswd">Підтвердіть пароль</label>
+						<input class="auth-input" type="password" placeholder="***" id="repeatpswd" pattern=".{5,}" required title="5 characters minimum">
 
-							<div class="enter-butt"><input type="submit" value="Зареєструватися" id="regMe"></div>
+						<div class="enter-butt"><input type="submit" value="Зареєструватися" id="regMe"></div>
 
-							<div class="soc-icon">
-								<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
-								<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
-							</div>
+						<div class="soc-icon">
+							<span class="soc-icon"><i class="fa fa-vk fa-2x" aria-hidden="true"></i></span>
+							<span class="soc-icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></span>
+						</div>
 
-						</form>
-						<span id="closeButt1"><i class="fa fa-times" aria-hidden="true"></i></span>
-					</div>
-				</section>
-			</div>
-		</div>
-	</div>
+					</form>
+					<span id="closeButt1"><i class="fa fa-times" aria-hidden="true"></i></span>
+				</div>
+			</section>
+		</div> <!-- content-inside -->
 
+	</div><!-- content -->
 	<footer class="main-footer">
 		<div class="authors">
 			&copy; <a href="#">Д'яченко Максим</a> / <a href="#">Боженко Роман</a>
 		</div>
 	</footer>
 
-	<script src="js/open-menu.js"></script>
+	<script src="js/everything-here.js"></script>
+	<script src="https://use.fontawesome.com/57495b2a36.js"></script>
 </body>
 </html>
