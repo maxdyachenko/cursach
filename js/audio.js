@@ -2,7 +2,8 @@
 	var start = document.getElementById('start-butt'),
 	curtimetext = document.getElementById('curtimetext'),
 	durtimetext = document.getElementById('durtimetext'),
-	volumeslider = document.getElementById('volumeslider');
+	volumeslider = document.getElementById('volumeslider'),
+	textarea = document.getElementById('textarea');
 
 
 	function initAudio(){
@@ -14,10 +15,12 @@
 		audio.addEventListener("timeupdate",seektimeupdate);
 		function playPause(){
 			if (audio.paused){
+				textarea.disabled = false;
 				start.innerHTML = "Пауза";
 				audio.play();
 			}
 			else{
+				textarea.disabled = true;
 				start.innerHTML = "Старт";
 				audio.pause();
 			}
