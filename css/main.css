@@ -665,21 +665,12 @@ input[type='range']::-ms-thumb, .adm-content textarea[type='range']::-ms-thumb {
 button[type="text"]:disabled {
   background: #dddddd; }
 
-#success, #error-dict {
-  border: 2px solid black;
-  border-radius: 5px;
-  box-sizing: border-box;
-  text-align: center;
-  background: #fff;
-  padding: 30px 15px;
+.success {
   position: absolute;
   top: 50%;
-  left: calc(50% - 100px);
   width: 200px;
   transform: translateY(-50%);
   visibility: hidden; }
-  #success a, #error-dict a {
-    text-decoration: underline; }
 
 .faq-list li {
   margin-top: 20px; }

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>E-dictation</title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/grid/grid.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/media.css">
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+	<aside class="adm-leftside">
+		<ul id="adm-list">
+			<li data-id="add-dict" class="tab-links active">Додати диктант</li>
+			<li data-id="edit-dict" class="tab-links">Редагувати</li>
+			<li data-id="add-mod" class="tab-links">Додати модератора</li>
+			<li data-id="profile-manage" class="tab-links">Керування профілем</li>
+		</ul>
+	</aside>
+	<section class="adm-content">
+		<section id="add-dict" class="tab-content">
+			<form action="" method="post">
+				<label for="dict-author" class="adm-dict-label">Введіть автора</label>
+				<input type="text" name="dict-author">
+
+				<label for="dict-title" class="adm-dict-label">Введіть назву диктанту</label>
+				<input type="text" name="dict-title">
+				
+				<label for="dict-text" class="adm-dict-label">Введіть текст диктанту</label>
+				<textarea name="dict-text"></textarea>
+
+				<label for="dict-audio" class="adm-dict-label">Завантажте аудіо файл</label>
+				<input type="file" name="dict-audio">
+
+				<input type="submit" value="Додати диктант" class="edit-butt">
+			</form>
+		</section>
+		<section id="edit-dict" class="tab-content">хз як робити редагування, з приводу цього треба поговорити</section>
+		<section id="add-mod" class="tab-content">хз як робити редагування, з приводу цього треба поговорити</section>
+		<section id="profile-manage" class="tab-content">хз як робити редагування, з приводу цього треба поговорити</section>
+	</section>
+
+	<script>
+		(function(){
+			var admList = document.getElementById('adm-list');
+
+			admList.addEventListener('click',setAdmContent);
+			function setAdmContent(){
+				if (event.target.tagName != 'LI'){
+					return;
+				}
+				var tabLinks = document.getElementsByClassName('tab-links');
+				for (var i=0;i<tabLinks.length;i++){
+					tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+				}
+				event.target.classList.add('active');
+				console.log(event.target.getAttribute('data-id'));
+				var targetElem = document.getElementById(event.target.getAttribute('data-id'));
+				console.log(targetElem);
+
+				var tabcontent = document.getElementsByClassName('tab-content');
+				for (i = 0; i < tabcontent.length; i++) {
+					tabcontent[i].style.display = "none";
+				}
+
+				targetElem.style.display = 'block';
+			}
+			
+
+		})();
+	</script>
+</body>
+</html>

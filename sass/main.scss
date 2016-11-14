@@ -369,11 +369,11 @@
 	margin-left: 20px;
 }
 input[type='range'] {
-    -webkit-appearance: none !important;
+	-webkit-appearance: none !important;
 	margin:0px;
 	padding:0px;
-    background: $headercolor;
-    height:13px;
+	background: $headercolor;
+	height:13px;
 	border-bottom:#333 1px solid;
 }
 input[type='range']::-ms-fill-lower  {
@@ -384,30 +384,30 @@ input[type='range']::-ms-fill-upper  {
 }
 input[type='range']::-moz-range-track {
 	border:none;
-    background: $headercolor;
+	background: $headercolor;
 }
 input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none !important;
-    background: $headercolor;
-    border: 1px solid white;
-    height:30px;
-    width:7px;
+	-webkit-appearance: none !important;
+	background: $headercolor;
+	border: 1px solid white;
+	height:30px;
+	width:7px;
 	cursor:pointer;
 }
 input[type='range']::-moz-range-thumb {
 	-webkit-appearance: none !important;
-    background: $headercolor;
-    border: 1px solid white;
-    height:30px;
-    width:7px;
+	background: $headercolor;
+	border: 1px solid white;
+	height:30px;
+	width:7px;
 	cursor:pointer;
 }
 input[type='range']::-ms-thumb {
-    -webkit-appearance: none !important;
-    background: $headercolor;
-    border: 1px solid white;
-    height:30px;
-    width:7px;
+	-webkit-appearance: none !important;
+	background: $headercolor;
+	border: 1px solid white;
+	height:30px;
+	width:7px;
 	cursor:pointer;
 }
 #volumeslider{
@@ -427,4 +427,105 @@ input[type='range']::-ms-thumb {
 	width: auto;
 	display: inline-block;
 	float: right;
+}
+button[type="text"]:disabled {
+	background: #dddddd;
+}
+#success{
+	border: 2px solid black;
+	border-radius: 5px;
+	box-sizing: border-box;
+	text-align: center;
+	background: #fff;
+	padding: 30px 15px;
+	position: absolute;
+	top: 50%;
+	left: calc(50% - 100px);
+	width: 200px;
+	transform: translateY(-50%);
+	visibility: hidden;
+	a{
+		text-decoration: underline;
+	}
+}
+#error-dict{
+	@extend #success;
+}
+
+
+//faq styles
+.faq-list{
+	li{
+		margin-top: 20px;
+	}
+}
+.ol-title{
+	color: $titlecolor;
+	font-size: 18px;
+	font-weight: bolder;
+}
+.inserted-list{
+	margin: 15px 0 0 30px;
+	li{
+		margin-top: 10px;
+		list-style-type: disc !important;
+		letter-spacing: 1px;
+	}
+}
+mark{
+	background: none;
+	font-weight: bolder;
+}
+
+//styles for adminka
+.adm-leftside{
+	float: left;
+	background: $headercolor;
+	height: 100%;
+	width: 20%;
+	li{
+		display: block;
+		text-align: center;
+		color: white;
+		letter-spacing: 1px;
+		padding: 12px 0;
+		border-bottom: 1px solid #e5e5e5;
+		cursor: pointer;
+		&:hover{
+			background:#2e2b29;
+		}
+	}
+	.active{
+		background:#2e2b29;
+	}
+}
+.adm-content{
+	width: 80%;
+	float: left;
+	section:first-child{
+		display:block;
+	}
+	section:not(first-child){
+		display: none;
+	}
+	.tab-content{
+		padding: 20px;
+	}
+	.adm-dict-label{
+		font-size: 20px;
+		display: block;
+	}
+	input{
+		padding: 5px;
+		border-radius: 4px;
+		border: 1px solid black;
+		font-size: 16px;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		width: 100%;
+	}
+	textarea{
+		@extend input;
+		min-height: 300px;
+	}
 }

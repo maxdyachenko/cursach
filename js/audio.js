@@ -4,6 +4,7 @@
 	durtimetext = document.getElementById('durtimetext'),
 	volumeslider = document.getElementById('volumeslider'),
 	textarea = document.getElementById('textarea');
+	checkbutt = document.getElementsByClassName('check-butt')[0];
 
 
 	function initAudio(){
@@ -17,6 +18,9 @@
 			if (audio.paused){
 				textarea.disabled = false;
 				start.innerHTML = "Пауза";
+				if (audio.currentTime == audio.duration){
+					return;
+				}
 				audio.play();
 			}
 			else{
@@ -29,6 +33,10 @@
 			audio.volume = volumeslider.value / 100;
 		}
 		function seektimeupdate(){
+			if (audio.currentTime == audio.duration){
+				textarea.disabled = true;
+				checkbutt.disabled = false;
+			}
 			var nt = audio.currentTime * (100 / audio.duration);
 			
 			var curmins = Math.floor(audio.currentTime / 60);

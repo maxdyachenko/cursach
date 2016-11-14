@@ -100,49 +100,43 @@
 					<span id="closeButt1"><i class="fa fa-times" aria-hidden="true"></i></span>
 				</div>
 			</section>
+		
+		<section class="container wrapper-bg">
+			<h1 class="sec-name">FAQ</h1>
+			<ol class="faq-list">
+				<li><span class="ol-title">Вимоги до написання диктанту:</span>
+					<ul class="inserted-list">
+						<li>Будьте уважні при написанні диктанту, якщо ви забудете написати якесь слово, або напишете щось зайве (тобто довжина вашого диктанту не має відрізнятися від початкового), то система не зможе перевірити ваш диктант.</li>
+						<li>Ви в праві використовувати пробіли, переноси рядків на ваш розсуд, окрім слів з дефісами(наприклад <mark>де-не-де</mark>), які ви маєте писати обов'язково разом, в інакшому випадку система не зможе перевірити ваш диктант. </li>
+					</ul>
+				</li>
+				<li><span class="ol-title">Загальні правила:</span>
+					<ul class="inserted-list">
+						<li>Ви можете написати диктант тільки 1 раз.</li>
+						<li>По кліку на кнопку старт (на сторінці з диктантом) стане доступним текстове поле для вводу тексту. Після того, як закінчиться диктант, текстове поле стане заблокованим, а кнопка "Перевірити" стане активною.</li>
+						<li>Місце у загальному рейтингу формується за коефіцієнтом помилок. (Кількість слів / кількість помилок)</li>
+					</ul>
+				</li>
+				<li><span class="ol-title">Зворотній зв'язок:</span>
+					<ul class="inserted-list"> 
+						<li><mark>max.dyachenko@inbox.ru</mark> - Д'яченко Максим</li>
+						<li><mark>тут напишеш своє мило</mark> - Боженко Роман</li>
+					</ul>
+				</li>
+			</ol>
+		</section>
 
-
-			<section class="container wrapper-bg">
-				<div class="row">
-					<h3 class="title">Автор - назва</h3>
-					<div class="warning">Якщо ви вперше пишете диктант, прочитайте, будь ласка, <a href="#">FAQ</a></div>
-
-					<button type="text" class="edit-butt" id="start-butt">Старт</button>
-
-					<div id="timebox">
-						<span id="curtimetext">00:00</span> / <span id="durtimetext">00:00</span>
-					</div>
-
-					<input id="volumeslider" type="range" min="0" max="100" value="50" step="1">
-
-					<div class="text-field">
-						<textarea disabled id="textarea"></textarea>
-					</div>
-
-					<button type="text" class="edit-butt check-butt" disabled="true">Перевірити</button>
-				</div>
-			</section>
-
-			<div id="success">
-				Диктант складений
-				Кількість помилок: <span id="dict-count"></span>
-				<a href="#">Через декілька секунд ви будете перенаправлені на головну сторінку</a>
-			</div>
-			<div id="error-dict">
-				Схоже що ви допустили помилку в диктанті, прочитайте уважно <a href="#">FAQ</a> і складіть диктант ще раз
-			</div>
-
-		</div> <!-- content-inside -->
+		</div><!-- content-inside -->
 	</div><!-- content -->
+
+
 	<footer class="main-footer">
 		<div class="authors">
 			&copy; <a href="#">Д'яченко Максим</a> / <a href="#">Боженко Роман</a>
 		</div>
 	</footer>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 	<script src="js/everything-here.js"></script>
-	<script src="js/audio.js"></script>
-	<script src="js/check.js"></script>
 	<script src="https://use.fontawesome.com/57495b2a36.js"></script>
 </body>
 </html>
